@@ -1,7 +1,6 @@
 // src/pages/DashboardPage.jsx
-import React from 'react';
-import { useAuth } from '../contexts/authHooks'; // Importa el hook useAuth
 import { Link } from 'react-router-dom'; // Para la navegación
+import { useAuth } from '../contexts/hooks'; // Importa el hook useAuth
 
 const DashboardPage = () => {
   // Obtiene el objeto 'user' (información del usuario),
@@ -27,7 +26,8 @@ const DashboardPage = () => {
   // Si el usuario está autenticado, muestra el contenido del dashboard.
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-blue-100 p-4">
-      <div className="bg-white p-8 rounded-lg shadow-xl text-center max-w-2xl w-full">
+      
+      <div className="bg-white dark:bg-black p-8 rounded-lg shadow-xl text-center max-w-2xl w-full">
         <h1 className="text-5xl font-bold text-blue-700 mb-6">Panel de Control</h1>
 
         <p className="text-xl text-gray-800 mb-8">

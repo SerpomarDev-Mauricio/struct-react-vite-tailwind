@@ -1,7 +1,7 @@
 // src/router/ProtectedRoute.jsx
 import React from 'react';
 import { Navigate } from 'react-router-dom'; // Importa Navigate para redirigir
-import { useAuth } from '../contexts/authHooks'; // Importa el hook useAuth
+import { useAuth } from '../contexts/hooks'; // Importa el hook useAuth
 
 // Componente para proteger rutas.
 // Recibe 'children' (el componente de página a proteger) y 'requiredRoles' (opcional).

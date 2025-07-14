@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '../contexts/authHooks';
+import { useAuth } from '../contexts/hooks';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar'; // Import the Navbar component
 

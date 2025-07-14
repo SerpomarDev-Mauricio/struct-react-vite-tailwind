@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../contexts/authHooks"; // Assuming authHooks is in '../contexts'
+import { useAuth } from "../../contexts/hooks"; // Assuming authHooks is in '../contexts'
 
 const Navbar = () => {
   const { user, logout } = useAuth();

@@ -1,6 +1,6 @@
 // src/pages/AdminPage.jsx
 import React from 'react';
-import { useAuth } from '../contexts/authHooks'; // Importa el hook useAuth
+import { useAuth } from '../contexts/hooks'; // Importa el hook useAuth
 import { Link } from 'react-router-dom'; // Para la navegación
 
 const AdminPage = () => {

@@ -1,7 +1,7 @@
 // src/contexts/AuthContext.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "./authConstants"; // Importa el objeto de contexto creado
+import { AuthContext } from "../constants"; // Importa el objeto de contexto creado
 // No necesitamos importar useAuth aquí, ya que este es el proveedor.
 
 // Componente Proveedor del Contexto de Autenticación.

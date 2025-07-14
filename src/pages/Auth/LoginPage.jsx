@@ -1,6 +1,6 @@
 // src/pages/Auth/LoginPage.jsx
 import React, { useState } from "react";
-import { useAuth } from "../../contexts/authHooks"; // Importa el hook useAuth
+import { useAuth } from "../../contexts/hooks"; // Importa el hook useAuth
 import WaterWaveBackground from "../../components/layout/WaterWaveBackground"; // Asegúrate de la ruta correcta
 // Si usas un componente InputGroup, impórtalo aquí.
 // import InputGroup from '../../components/ui/InputGroup'; // Ajusta la ruta si es diferente
