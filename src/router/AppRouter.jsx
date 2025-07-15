@@ -50,41 +50,19 @@ const AppRouter = () => {
       {/* ==================================== */}
 
       {/* Ruta protegida para el Dashboard. Solo requiere que el usuario esté autenticado. */}
-      <Route
-        path="/dashboard"
-        element={
-          <ProtectedRoute>
-            {" "}
-            {/* Envuelve DashboardPage con ProtectedRoute */}
-            <DashboardPage />
-          </ProtectedRoute>
-        }
-      />
-
+      <Route element={<ProtectedRoute />}>
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Route>
       {/* Ruta protegida para el Perfil del usuario. Solo requiere que el usuario esté autenticado. */}
-      <Route
-        path="/profile"
-        element={
-          <ProtectedRoute>
-            {" "}
-            {/* Envuelve ProfilePage con ProtectedRoute */}
-            <ProfilePage />
-          </ProtectedRoute>
-        }
-      />
+      <Route element={<ProtectedRoute />}>
+        <Route path="/profile" element={<ProfilePage />} />
+      </Route>
 
       {/* Ruta protegida para la página de Administración.
               Requiere que el usuario esté autenticado Y tenga el rol 'admin'. */}
-      <Route
-        path="/admin"
-        element={
-          <ProtectedRoute requiredRoles={["admin"]}>
-            {" "}
-            {/* Aquí se especifica el rol requerido */}
-            <AdminPage />
-          </ProtectedRoute>
-        }
-      />
+      <Route element={<ProtectedRoute requiredRoles={["admin"]} redirectPath="/dashboard"/>}>
+        <Route path="/admin" element={<AdminPage />} />
+      </Route>
 
       {/* ==================================== */}
       {/* ======== Ruta 404 (No Encontrado) ======== */}

@@ -11,7 +11,7 @@ const HomePage = () => {
         <Link to="/auth" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
           Ir a Login/Registro
         </Link>
-        <Link to="/dashboard" className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full">
+        <Link to="/dashboard" className="text-blue-300 bg-red-600 hover:bg-green-700 font-bold py-2 px-4 rounded-full">
           Ir al Dashboard
         </Link>
       </nav>

@@ -1,11 +1,11 @@
 // src/router/ProtectedRoute.jsx
 import React from 'react';
-import { Navigate } from 'react-router-dom'; // Importa Navigate para redirigir
+import { Navigate, Outlet } from 'react-router-dom'; // Importa Navigate para redirigir
 import { useAuth } from '../contexts/hooks'; // Importa el hook useAuth
 
 // Componente para proteger rutas.
 // Recibe 'children' (el componente de página a proteger) y 'requiredRoles' (opcional).
-const ProtectedRoute = ({ children, requiredRoles }) => {
+const ProtectedRoute = ({ requiredRoles, redirectPath="/" }) => {
   const { user, hasRole } = useAuth(); // Obtiene el usuario y la función hasRole del contexto
 
   // Paso 1: Verificar si el usuario está autenticado.
@@ -21,12 +21,12 @@ const ProtectedRoute = ({ children, requiredRoles }) => {
     // Si el usuario está logueado pero no tiene el rol necesario,
     // muestra una alerta y lo redirige a la página principal.
     alert('Acceso denegado: No tienes los permisos necesarios para acceder a esta sección.');
-    return <Navigate to="/" replace />; // O podrías redirigir a una página de "Acceso No Autorizado"
+    return <Navigate to={redirectPath} replace />; // O podrías redirigir a una página de "Acceso No Autorizado"
   }
 
   // Si el usuario está autenticado y tiene los roles correctos (o no se requieren roles),
   // renderiza el componente hijo (la página que se desea proteger).
-  return children;
+  return <Outlet/>; // Utiliza Outlet para renderizar el componente hijo dentro de la ruta protegida
 };
 
 export default ProtectedRoute;
