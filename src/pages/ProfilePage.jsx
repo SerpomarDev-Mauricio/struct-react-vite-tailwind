@@ -27,7 +27,7 @@ const ProfilePage = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar /> {/* Include the Navbar here */}
       <div className="flex-grow flex flex-col items-center justify-center bg-backgroundLight p-4">
-        <div className="bg-white p-8 rounded-lg shadow-custom-lg text-center max-w-md w-full">
+        <div className="backdrop-blur-md p-8 rounded-lg shadow-custom-lg text-center max-w-md w-full">
           <h1 className="text-4xl font-bold text-primary mb-6 font-heading">Mi Perfil</h1>
 
           <div className="mb-6 space-y-4">
