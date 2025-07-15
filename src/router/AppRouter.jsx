@@ -10,6 +10,7 @@ import ProfilePage from "../pages/ProfilePage"; // Página de perfil de usuario
 
 // Importa los componentes de autenticación y protección
 import ProtectedRoute from "./ProtectedRoute"; // <-- Importa el componente de Ruta Protegida
+import RegisterPage from "../pages/auth/RegisterPage";
 
 // Componente para la página 404 (No Encontrado)
 const NotFoundPage = () => {
@@ -42,6 +43,7 @@ const AppRouter = () => {
       {/* Ruta para la página de login/registro (App.jsx con animación de paneles) */}
       {/* Esta ruta no necesita protección porque es para que los usuarios se autentiquen. */}
       <Route path="/auth" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
 
       {/* ==================================== */}
       {/* ======== Rutas Protegidas ======== */}

@@ -18,8 +18,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove("force-light", "force-dark");
-    root.classList.add(`force-${theme}`);
+    root.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 
